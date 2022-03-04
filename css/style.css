@@ -44,7 +44,7 @@ header {
 }
 
 header .contenar {
-  padding: 30px 0;
+  padding: 30px 15px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid white;
@@ -59,6 +59,7 @@ header .logo h1 {
 
 header .contenar nav i {
   display: none;
+  cursor: pointer;
 }
 
 header nav ul {
@@ -87,13 +88,17 @@ header nav ul li a {
   -o-transition: 0.3s;
 }
 
+header nav ul li .active {
+  color: var(--main-color);
+}
+
 header nav ul li a::before {
   content: "";
   width: 100%;
   height: 3px;
   background: var(--main-color);
   position: absolute;
-  left: -110px;
+  left: -100%;
   top: 0;
   transition: 0.3s;
   -webkit-transition: 0.3s;
@@ -115,25 +120,38 @@ header nav ul li a:hover::before {
     display: block;
     padding: 20px 30px;
   }
-  header nav ul {
+  .close {
+    text-align: right;
+    font-size: 1.5em;
+  }
+  .show,
+  header nav .hide {
     display: none;
-    background: var(--trans-background);
+    background: rgb(51, 44, 44);
     flex-direction: column;
+    justify-content: flex-start;
     position: absolute;
     left: 0;
-    top: 120px;
-    width: 100%;
+    top: 0;
+    width: 100vw;
+    height: 150vh;
+}
+.show {
+  display: block;
+
 }
   header nav ul li a {
+    text-align: center;
+    line-height: 5;
     color: white;
     border-bottom: 1px solid #444;
   }
   header nav ul li a::before {
     left: -100%;
   }
-  header nav i:hover + ul {
+  /* header nav i:hover + ul {
     display: block;
-  }
+  } */
 }
 
 .intro {
@@ -265,6 +283,13 @@ header nav ul li a:hover::before {
   -o-transition: 1s;
 }
 
+@media (max-width:768px) {
+  .last {
+    font-size: 20px;
+  }
+}
+
+
 .main-title:hover {
   color: white;
 }
@@ -316,7 +341,7 @@ header nav ul li a:hover::before {
   max-width: 375px;
   color: #777;
   line-height: 1.5;
-  margin: 0 auto 20px;
+  margin: 0 auto 50px;
 }
 
 @keyframes left {
@@ -358,29 +383,31 @@ header nav ul li a:hover::before {
   }
 }
 /* end */
-.portfolio {
+.residential,
+.office-design,
+.retail-interior-design {
   padding: 80px 0;
 }
 
-.portfolio .prot {
+.prot {
   display: grid;
   grid-template-columns: repeat(auto-fill , minmax(600px , 1fr));
-  gap: 50px;
+  gap: 30px;
 }
 
 @media (max-width: 768px) {
-  .portfolio .prot {
+.prot {
     grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
   }
 }
 
 @media (min-width: 769px) and (max-width: 1250px) {
-  .portfolio .prot {
+.prot {
     grid-template-columns: repeat(auto-fill , minmax(400px , 1fr));
   }
 }
 
-.portfolio .prot .box {
+.prot .box {
   overflow: hidden;
   position: relative;
   transition: 0.5s;
@@ -390,7 +417,7 @@ header nav ul li a:hover::before {
   -o-transition: 0.5s;
 }
 
-.portfolio .prot .box .image img {
+.prot .box .image img {
   max-width: 100%;
   transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -399,7 +426,7 @@ header nav ul li a:hover::before {
   -o-transition: 0.5s;
 }
 
-.portfolio .prot .box:hover .image img {
+.prot .box:hover .image img {
   transform: rotate(5deg) scale(1.2);
   -webkit-transform: rotate(5deg) scale(1.2);
   -moz-transform: rotate(5deg) scale(1.2);
@@ -407,7 +434,7 @@ header nav ul li a:hover::before {
   -o-transform: rotate(5deg) scale(1.2);
 }
 
-.portfolio .prot .box .desc {
+.prot .box .desc {
   height: 100%;
   padding: 50px;
   background: var(--trans-background);
@@ -422,11 +449,11 @@ header nav ul li a:hover::before {
   -o-transition: 1s;
 }
 
-.portfolio .prot .box:hover .desc {
+.prot .box:hover .desc {
   opacity: 1;
 }
 
-.portfolio .prot .box .desc h3 {
+.prot .box .desc h3 {
   color: var(--main-color);
   text-align: center;
   font-weight: 700;
@@ -434,14 +461,14 @@ header nav ul li a:hover::before {
   margin-bottom: 50px;
 }
 
-.portfolio .prot .box .desc p {
+.prot .box .desc p {
   color: #7dc5ff;
   text-align: center;
   line-height: 2;
   border-bottom: 1px solid var(--main-color);
 }
 
-.portfolio .prot .box .desc a {
+.prot .box .desc a {
   display: block;
   width: fit-content;
   text-decoration: none;
@@ -451,30 +478,30 @@ header nav ul li a:hover::before {
 }
 
 @media (max-width: 768px) {
-  .portfolio .prot .box .desc {
+  .prot .box .desc {
     padding: 20px;
   }
-  .portfolio .prot .box .desc h3 {
+  .prot .box .desc h3 {
     margin-bottom: 20px;
   }
-  .portfolio .prot .box .desc p {
+  .prot .box .desc p {
     line-height: 1;
   }
-  .portfolio .prot .box .desc a {
+  .prot .box .desc a {
     margin-top: 10px;
   }
 }
 @media (min-width: 769px) and (max-width: 1250px) {
-  .portfolio .prot .box .desc {
+  .prot .box .desc {
     padding: 50px;
   }
-  .portfolio .prot .box .desc h3 {
+  .prot .box .desc h3 {
     margin-bottom: 20px;
   }
-  .portfolio .prot .box .desc p {
+  .prot .box .desc p {
     line-height: 2;
   }
-  .portfolio .prot .box .desc a {
+  .prot .box .desc a {
     margin-top: 10px;
   }
 }
@@ -500,6 +527,24 @@ header nav ul li a:hover::before {
 .more:hover {
   color: var(--main-color);
   background: white;
+}
+
+.office-design {
+  background: #969696;
+  position: relative;
+  z-index: 0;
+}
+
+.office-design::before {
+  content: "";
+  width: 100%;
+  height: 50px;
+  background-image: linear-gradient(131deg, white 25%, #c60b0b00 25%),
+  linear-gradient(228deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
+  position: absolute;
+  top: -30px;
+  left: 0;
 }
 
 footer {
@@ -543,6 +588,11 @@ footer .contenar .socil .icon i {
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 footer .contenar .socil .icon .one:hover {
@@ -550,11 +600,20 @@ footer .contenar .socil .icon .one:hover {
 }
 
 footer .contenar .socil .icon .two:hover {
-  background: #1da1f2;
+  background-image: linear-gradient(45deg, #405DE6,#5b51db,#833AB4,
+  #c13584,#E1306C,#FD1D1D);
 }
 
 footer .contenar .socil .icon .three:hover {
-  background: #ff0000;
+  background: #2867B2;
+}
+
+footer .contenar .socil .icon .four:hover {
+  background: #2867B2;
+}
+
+footer .contenar .socil .icon .five:hover {
+  background: #25D366;
 }
 
 footer .contenar .socil p {
@@ -600,7 +659,7 @@ footer .contenar .link ul li i {
 
 footer .contenar .adres .box {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   margin-bottom: 30px;
 }
 
@@ -609,7 +668,16 @@ footer .contenar .adres .box i {
   margin-right: 15px;
 }
 
+footer .contenar .adres .box a {
+  display: inline-block;
+  text-decoration: none;
+  color: #b9b9b9;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
 footer .contenar .adres .box p {
+  display: inline-block;
   color: #b9b9b9;
   line-height: 1.7;
 }
