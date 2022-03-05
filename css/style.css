@@ -54,16 +54,17 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 5px;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .iconh i {
@@ -110,10 +111,17 @@ header .contenar .contact i {
 header .contenar .head {
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
 header .logo img {
-  width: 206px;
+  width: 300px;
+}
+
+@media (max-width: 768px) {
+  header .logo img {
+    width: 220px;
+  }
 }
 
 header .contenar nav i {
@@ -212,35 +220,22 @@ header nav ul li a:hover::before {
 }
 
 .intro {
-  background: url(../images/intro-1.jpg) no-repeat;
-  background-size: cover;
+  background: black;
   width: 100vw;
-  height: 100vh;
+  height: 1000px;
   position: relative;
-  animation: slider 60s linear infinite;
-  -webkit-animation: slider 60s linear infinite;
+  animation: slider 30s linear infinite;
+  -webkit-animation: slider 30s linear infinite;
 }
 
 .intro::before {
   content: "";
   background: var(--trans-background);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.fa-angle-left,
-.fa-angle-right {
-  color: white;
-  position: absolute;
-  top: 50%;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
 }
 
 .intro .text {
@@ -273,6 +268,7 @@ header nav ul li a:hover::before {
 @media (max-width: 768px) {
   .intro .text {
     padding: 50px 25px;
+    background: none;
   }
 }
 
@@ -302,28 +298,28 @@ header nav ul li a:hover::before {
 }
 
 .intro ul .actone {
-  animation: actone 60s linear infinite;
-  -webkit-animation: actone 60s linear infinite;
+  animation: actone 30s linear infinite;
+  -webkit-animation: actone 30s linear infinite;
 }
 
 .intro ul .acttwo {
-  animation: acttwo 60s linear infinite;
-  -webkit-animation: acttwo 60s linear infinite;
+  animation: acttwo 30s linear infinite;
+  -webkit-animation: acttwo 30s linear infinite;
 }
 
 .intro ul .acttree {
-  animation: acttree 60s linear infinite;
-  -webkit-animation: acttree 60s linear infinite;
+  animation: acttree 30s linear infinite;
+  -webkit-animation: acttree 30s linear infinite;
 }
 
 .intro ul .actfour {
-  animation: actfour 60s linear infinite;
-  -webkit-animation: actfour 60s linear infinite;
+  animation: actfour 30s linear infinite;
+  -webkit-animation: actfour 30s linear infinite;
 }
 
 .intro ul .actfive {
-  animation: actfive 60s linear infinite;
-  -webkit-animation: actfive 60s linear infinite;
+  animation: actfive 30s linear infinite;
+  -webkit-animation: actfive 30s linear infinite;
 }
 /* start global rulz */
 .main-title {
@@ -856,6 +852,33 @@ hr {
     background-size: cover;
   }
 }
+
+/* 770 */
+/* @media (max-width: 768px) {
+  @keyframes slider {
+    0% , 19% {
+      background: url(../images/intro-1-77.jpg) no-repeat;
+      background-size: cover;
+    }
+    20% , 39% {
+      background: url(../images/intro-2-77.jpg) no-repeat;
+      background-size: cover;
+    }
+    40% , 59% {
+      background: url(../images/intro-3-77.jpg) no-repeat;
+      background-size: cover;
+    }
+    60% , 79% {
+      background: url(../images/intro-4-77.jpg) no-repeat;
+      background-size: cover;
+    }
+    80% , 99% {
+      background: url(../images/intro-5-77.jpg) no-repeat;
+      background-size: cover;
+    }
+  }
+} */
+/* end */
 
 @keyframes actone {
   0% , 20% {
