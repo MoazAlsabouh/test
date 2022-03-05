@@ -222,7 +222,7 @@ header nav ul li a:hover::before {
 .intro {
   background: black;
   width: 100vw;
-  height: 1000px;
+  height: 130vh;
   position: relative;
   animation: slider 30s linear infinite;
   -webkit-animation: slider 30s linear infinite;
@@ -272,7 +272,7 @@ header nav ul li a:hover::before {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-height: 1100px) {
   .intro {
     height: 100vh;
   }
