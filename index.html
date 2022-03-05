@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>test Page</title>
+  <title>Mor Lacivert</title>
   <!-- normal el -->
   <link rel="stylesheet" href="css/normalize.css">
   <!-- icon -->
@@ -24,36 +24,48 @@
     </a>
   </div>
   <div class="contenar">
-    <div class="logo">
-      <h1>Logo</h1>
+    <div class="head">
+      <div class="logo">
+        <a href="#">
+          <img src="images/logo.png" alt="logo">
+        </a>
+      </div>
+      <nav>
+        <i class="fas fa-bars toggle-menu icon" id="icon"></i>
+        <ul class="hide" id="side">
+          <i class="fa-solid fa-xmark close" id="closebar"></i>
+          <li>
+            <a href="#home" class="active">Home</a>
+          </li>
+          <li>
+            <a href="#residential">Residential</a>
+          </li>
+          <li>
+            <a href="#office-design">Office design</a>
+          </li>
+          <li>
+            <a href="#retail-interior-design">Retail Interior Design</a>
+          </li>
+          <li>
+            <a href="#contact">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <i class="fas fa-bars toggle-menu icon" id="icon"></i>
-      <ul class="hide" id="side">
-        <i class="fa-solid fa-xmark close" id="closebar"></i>
-        <li>
-          <a href="#home" class="active">Home</a>
-        </li>
-        <li>
-          <a href="#residential">Residential</a>
-        </li>
-        <li>
-          <a href="#office-design">Office design</a>
-        </li>
-        <li>
-          <a href="#retail-interior-design">Retail Interior Design</a>
-        </li>
-        <li>
-          <a href="#contact">Contact Us</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="contact">
+      <div>
+        <i class="fas fa-phone-volume fa-fw"></i>
+        <a href="tel:+971503425541" class="num" target="_blank">+971503425541</a>
+      </div>
+      <div>
+        <i class="fa-solid fa-envelope four"></i>
+        <a href="mailto:info@morlacivert.com" class="mail" target="_blank">info@morlacivert.com</a>
+      </div>
+    </div>
   </div>
 </header>
 <main>
   <section class="intro" id="home">
-    <i class="fas fa-angle-left change-background fa-2x"></i>
-    <i class="fas fa-angle-right change-background fa-2x"></i>
     <div class="text">
       <h2>Hello World!
         We Are Kasper We Make Art.</h2>
@@ -65,9 +77,11 @@
         </p>
     </div>
     <ul>
-      <li></li>
-      <li class="active"></li>
-      <li></li>
+      <li class="actone"></li>
+      <li class="acttwo"></li>
+      <li class="acttree"></li>
+      <li class="actfour"></li>
+      <li class="actfive"></li>
     </ul>
   </section>
   <section class="residential" id="residential">
@@ -356,7 +370,9 @@
 <footer id="contact">
   <div class="contenar">
     <div class="socil">
-      <h2>Logo</h2>
+      <a href="#">
+        <img src="images/logo.png" alt="logo">
+      </a>
       <div class="icon">
         <a href="https://www.facebook.com/morlacivertdesign" target="_blank">
           <i class="fa-brands fa-facebook-f one"></i>
@@ -448,7 +464,7 @@
     </div>
   </div>
   <hr>
-  <p class="copy">Made With &copy; <a href="https://github.com/MoazAlsabouh" target="_blank">Moaz</a></p>
+  <p class="copy">Made With &copy; <a href="https://github.com/MoazAlsabouh" target="_blank">Moaz Alsabouh</a></p>
 </footer>
 <script src="js/script.js">
 </script>
