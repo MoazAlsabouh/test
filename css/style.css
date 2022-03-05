@@ -176,6 +176,7 @@ header nav ul li a:hover::before {
 
 @media (max-width: 768px) {
   header .contenar nav i {
+    color: var(--main-color);
     display: block;
     padding: 20px 30px;
   }
