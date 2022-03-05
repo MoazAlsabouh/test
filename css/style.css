@@ -272,6 +272,12 @@ header nav ul li a:hover::before {
   }
 }
 
+@media (min-width: 1200px) {
+  .intro {
+    height: 100vh;
+  }
+}
+
 .intro ul {
   list-style-type: none;
   display: flex;
@@ -662,7 +668,7 @@ footer .contenar .socil .icon .one:hover {
 }
 
 footer .contenar .socil .icon .two:hover {
-  background-image: linear-gradient(45deg, #405DE6,#5b51db,#833AB4,
+  background-image: linear-gradient(-45deg, #405DE6,#5b51db,#833AB4,
   #c13584,#E1306C,#FD1D1D);
 }
 
