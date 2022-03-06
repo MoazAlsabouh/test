@@ -609,6 +609,63 @@ header nav ul li a:hover::before {
   left: 0;
 }
 
+.proti {
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(400px , 1fr));
+  gap: 50px;
+}
+
+.proti .box {
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.proti .box::before {
+  content: "";
+  width: 0;
+  height: 0;
+  background: rgb(255 255 255 / 20%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.proti .box:hover::before {
+  animation: 0.5s linear 0s 1 normal none running flash;
+  -webkit-animation: 0.5s linear 0s 1 normal none running flash;
+}
+
+.proti .box img {
+  max-width: 100%;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.proti .box:hover img {
+  transform: scale(1.2) rotate(5deg);
+  -webkit-transform: scale(1.2) rotate(5deg);
+  -moz-transform: scale(1.2) rotate(5deg);
+  -ms-transform: scale(1.2) rotate(5deg);
+  -o-transform: scale(1.2) rotate(5deg);
+}
+
+@media (max-width: 992px) {
+  .proti {
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+  }
+}
+
 footer {
   background: #191919;
   padding: 80px 0;
@@ -858,33 +915,6 @@ hr {
     background-size: cover;
   }
 }
-
-/* 770 */
-/* @media (max-width: 768px) {
-  @keyframes slider {
-    0% , 19% {
-      background: url(../images/intro-1-77.jpg) no-repeat;
-      background-size: cover;
-    }
-    20% , 39% {
-      background: url(../images/intro-2-77.jpg) no-repeat;
-      background-size: cover;
-    }
-    40% , 59% {
-      background: url(../images/intro-3-77.jpg) no-repeat;
-      background-size: cover;
-    }
-    60% , 79% {
-      background: url(../images/intro-4-77.jpg) no-repeat;
-      background-size: cover;
-    }
-    80% , 99% {
-      background: url(../images/intro-5-77.jpg) no-repeat;
-      background-size: cover;
-    }
-  }
-} */
-/* end */
 
 @keyframes actone {
   0% , 20% {
