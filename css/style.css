@@ -398,13 +398,6 @@ header nav ul li a:hover::before {
   -webkit-animation: right 1s linear forwards;
 }
 
-.main-title + p {
-  text-align: center;
-  max-width: 375px;
-  color: #777;
-  line-height: 1.5;
-  margin: 0 auto 50px;
-}
 
 @keyframes left {
   50% {
